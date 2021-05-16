@@ -1,6 +1,7 @@
 package com.tnicacio.dscatalog.services;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.tnicacio.dscatalog.dto.CategoryDTO;
 import com.tnicacio.dscatalog.entities.Category;
 import com.tnicacio.dscatalog.repositories.CategoryRepository;
+import com.tnicacio.dscatalog.services.exceptions.EntityNotFoundException;
 
 @Service
 public class CategoryService {
@@ -25,4 +27,13 @@ public class CategoryService {
 				.collect(Collectors.toList());
 		return categoriesDTO;
 	}
+
+	@Transactional(readOnly = true)
+	public CategoryDTO findById(Long id) {
+		Optional<Category> optionalEntity = repository.findById(id);
+		Category entity = optionalEntity
+				.orElseThrow(() -> new EntityNotFoundException("Entity not found"));
+		return new CategoryDTO(entity);
+	}
+	
 }
