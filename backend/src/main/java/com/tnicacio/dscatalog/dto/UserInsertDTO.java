@@ -1,5 +1,8 @@
 package com.tnicacio.dscatalog.dto;
 
+import com.tnicacio.dscatalog.services.validation.UserInsertValid;
+
+@UserInsertValid
 public class UserInsertDTO extends UserDTO {
 	private static final long serialVersionUID = 1L;
 
