@@ -16,6 +16,7 @@
 	<description>DsCatalog Bootcamp DevSuperior</description>
 	<properties>
 		<java.version>11</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring-cloud.version>Hoxton.SR8</spring-cloud.version>
 	</properties>
 	<dependencies>
