@@ -1,0 +1,151 @@
+.home-container {
+  padding: 0 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.home-card {
+  display: flex;
+  flex-direction: column-reverse;
+  border-radius: 20px;
+}
+
+.home-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 10px 40px;
+}
+
+.home-content-container .content-title {
+  font-size: 1em;
+  font-weight: bold;
+  width: 260px;
+  margin-bottom: 15px;
+}
+
+
+.home-content-container .content-text {
+  width: 260px;
+  color: #9E9E9E;
+  font-size: 0.65em;
+  margin-bottom: 30px;
+}
+
+.home-image-container {
+  padding: 50px 15px;
+}
+
+.home-image-container svg {
+  width: 100%;
+  height: auto;
+}
+
+@media(min-width: 576px) {
+  .home-container {
+    padding: 15px;
+    font-size: 30px;
+  }
+
+  .home-content-container .content-title {
+    width: 506px;
+    font-size: 1.25em;
+    margin-bottom: 20px;
+  }
+  
+  
+  .home-content-container .content-text {
+    width: 506px;
+    font-size: 0.70em;
+    margin-bottom: 30px;
+  }
+
+  .home-image-container svg {
+    width: 506px;
+  }
+
+}
+
+@media(min-width: 768px) {
+  .home-image-container {
+    padding: 100px 20px;
+  }
+
+  .home-content-container {
+    padding: 20px 20px 100px;
+  }
+}
+
+
+@media(min-width: 992px) {
+  .home-container {
+    padding: 40px;
+    font-size: 55px;
+  }
+  .home-image-container {
+    padding: 125px 20px;
+  }
+
+  .home-content-container {
+    padding: 20px 20px 150px;
+  }
+
+  .home-content-container .content-title {
+    width: 800px;
+    margin-bottom: 26px;
+  }
+  
+  .home-content-container .content-text {
+    width: 800px;
+    margin-bottom: 47px;
+  }
+}
+
+@media(min-width: 1200px) {
+
+  .home-container {
+    max-height: 90vh;
+  }
+
+  .home-card {
+    padding: calc((85vh - 680px) / 2) 0;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .home-content-container {
+    align-items: flex-start;
+    text-align: left;
+
+    flex-flow: wrap;
+    flex-direction: column;
+    align-content: flex-start;
+    align-content: space-between;
+  }
+
+  .home-content-container .content-title {
+    margin-top: 40px;
+  }
+
+  .button-content {
+    width: 800px;
+  }
+
+  .home-image-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .home-image-container svg {
+    width: 100%;
+  }
+}
+
+@media(min-width: 1400px) {
+  .home-image-container svg {
+    width: 480px;
+  }
+}
